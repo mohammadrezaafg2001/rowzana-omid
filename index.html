@@ -5,116 +5,129 @@
         <div>آکادمی آنلاین روزنه امید</div>
     </header>
 </style>
-:root {
-    --primary-color: #0f172a; /* سرمه‌ای تیره حرفه‌ای */
-    --accent-color: #d4af37;  /* طلایی آکادمی */
-    --text-light: #f8fafc;
-}
-
-.rozaneh-intro {
-    direction: rtl;
-    font-family: 'Tahoma', sans-serif;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    padding: 80px 0;
-    color: var(--text-light);
-    overflow: hidden;
-}
-
-.hero-content {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.main-title {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.main-title span {
-    color: var(--accent-color);
-    text-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
-}
-
-.tagline {
-    font-size: 1.1rem;
-    opacity: 0.8;
-}
-
-.grid-layout {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.glass-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 40px;
-    flex: 1;
-    min-width: 320px;
-    max-width: 450px;
-    transition: transform 0.3s ease;
-    text-align: center;
-}
-
-.glass-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--accent-color);
-}
-
-.icon-circle {
-    font-size: 50px;
-    margin-bottom: 20px;
-}
-
-.glass-card h3 {
-    color: var(--accent-color);
-    margin-bottom: 15px;
-    font-size: 1.5rem;
-}
-
-.glass-card p {
-    line-height: 1.8;
-    opacity: 0.9;
-}
-
-.values-wrapper {
-    margin-top: 70px;
-    text-align: center;
-}
-
-.section-heading {
-    margin-bottom: 30px;
-    font-size: 1.8rem;
-}
-
-.values-flex {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.value-badge {
-    background: rgba(212, 175, 55, 0.1);
-    border: 1px solid var(--accent-color);
-    padding: 10px 25px;
-    border-radius: 50px;
-    font-weight: bold;
-    color: var(--accent-color);
-}
-
-/* بهینه سازی برای موبایل */
-@media (max-width: 768px) {
-    .main-title { font-size: 1.8rem; }
-    .glass-card { min-width: 100%; }
-}
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <section class="rozaneh-intro">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آکادمی آنلاین روزنه امید</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
+        :root {
+            --primary-bg: #0f172a;
+            --accent-gold: #d4af37;
+            --glass-white: rgba(255, 255, 255, 0.07);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Vazirmatn', Tahoma, sans-serif;
+            background-color: var(--primary-bg);
+            color: #f8fafc;
+        }
+
+        .rozaneh-intro {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .main-title {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .main-title span {
+            color: var(--accent-gold);
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-bottom: 50px;
+        }
+
+        .grid-layout {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .glass-card {
+            background: var(--glass-white);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 35px;
+            flex: 1;
+            min-width: 300px;
+            max-width: 480px;
+            transition: 0.3s;
+            border-top: 4px solid var(--accent-gold);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .icon-circle {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: var(--accent-gold);
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            line-height: 1.9;
+            text-align: justify;
+            font-size: 1rem;
+        }
+
+        .values-wrapper {
+            margin-top: 60px;
+        }
+
+        .values-flex {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .value-badge {
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid var(--accent-gold);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            color: var(--accent-gold);
+        }
+
+        @media (max-width: 768px) {
+            .main-title { font-size: 2rem; }
+            .glass-card { min-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<section class="rozaneh-intro">
     <div class="container">
         <div class="hero-content">
             <h1 class="main-title">آکادمی آنلاین <span>روزنه امید</span></h1>
@@ -131,12 +144,12 @@
             <div class="glass-card">
                 <div class="icon-circle">👁️</div>
                 <h3>دیدگاه ما</h3>
-                <p>خلق جهانی که در آن هیچ استعدادی به دلیل محدودیت جغرافیایی خاموش نمی‌شود؛ جایی که دانش، پلی است به سوی آزادی و موفقیت.</p>
+                <p>خلق جهانی که در آن هیچ استعدادی به دلیل محدودیت جغرافیایی خاموش نمی‌شود؛ جایی که دانش، پلی است به سوی آزادی، آگاهی و موفقیت پایدار.</p>
             </div>
         </div>
 
         <div class="values-wrapper">
-            <h2 class="section-heading">💎 اصول اساسی ما</h2>
+            <h2>💎 ارزش‌های بنیادین ما</h2>
             <div class="values-flex">
                 <div class="value-badge"><span>🌱</span> رشد مستمر</div>
                 <div class="value-badge"><span>🌍</span> کیفیت جهانی</div>
@@ -145,6 +158,10 @@
             </div>
         </div>
     </div>
+</section>
+
+</body>
+</html>
     </section>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
