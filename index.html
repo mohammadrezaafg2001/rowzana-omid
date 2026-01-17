@@ -10,10 +10,10 @@
 
         :root {
             --primary-blue: #002b5b;
-            --dark-navy: #0f172a;
+            --dark-navy: #0a1128;
             --accent-gold: #d4af37;
             --whatsapp-green: #25d366;
-            --glass-white: rgba(255, 255, 255, 0.07);
+            --soft-blue: #1e293b;
         }
 
         body {
@@ -23,107 +23,144 @@
             background-color: var(--dark-navy);
             color: #f8fafc;
             line-height: 1.8;
-            text-align: center;
         }
 
-        /* هدر و لوگو */
         header {
-            background-color: var(--primary-blue);
-            padding: 40px 20px;
-            border-bottom: 5px solid var(--accent-gold);
+            background: linear-gradient(to bottom, var(--primary-blue), var(--dark-navy));
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--accent-gold);
         }
 
         .logo-img {
-            max-width: 150px;
-            height: auto;
-            border-radius: 15px;
+            max-width: 140px;
+            border-radius: 20px;
             margin-bottom: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 40px 20px;
         }
 
-        /* بخش معرفی و مأموریت (Glassmorphism) */
-        .glass-card {
-            background: var(--glass-white);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 30px;
-            margin: 20px 0;
-            border-top: 4px solid var(--accent-gold);
-            text-align: justify;
-        }
-
-        .glass-card h3 {
-            color: var(--accent-gold);
+        /* بخش دیدگاه - استایل متفاوت */
+        .vision-box {
+            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(212,175,55,0.05) 100%);
+            border: 1px dashed var(--accent-gold);
+            padding: 40px;
+            border-radius: 30px;
+            margin-bottom: 40px;
             text-align: center;
+        }
+
+        .vision-box h2 {
+            color: var(--accent-gold);
+            font-size: 2rem;
             margin-top: 0;
         }
 
-        /* بخش ارزش‌ها */
-        .values-flex {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin: 20px 0;
+        /* بخش مأموریت - استایل کارت شیشه‌ای */
+        .mission-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border-right: 8px solid var(--accent-gold);
+            padding: 35px;
+            border-radius: 15px;
+            margin-bottom: 50px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
         }
 
-        .value-badge {
-            background: rgba(212, 175, 55, 0.15);
-            border: 1px solid var(--accent-gold);
-            padding: 8px 18px;
-            border-radius: 50px;
-            font-size: 0.9em;
+        .mission-card h2 {
+            color: white;
+            margin-top: 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 15px;
+        }
+
+        /* بخش ارزش‌ها با آیکون و انیمیشن */
+        .values-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
             color: var(--accent-gold);
-            font-weight: bold;
         }
 
-        /* دکمه‌های فراخوان (CTA) */
-        .badge {
-            background-color: var(--accent-gold);
-            color: var(--primary-blue);
-            padding: 10px 20px;
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .value-card {
+            background: var(--soft-blue);
+            padding: 25px;
             border-radius: 20px;
-            font-weight: bold;
-            display: inline-block;
-            margin: 20px 0;
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            background: rgba(212, 175, 55, 0.1);
+            border-color: var(--accent-gold);
+        }
+
+        .value-card .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .value-card strong {
+            display: block;
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .value-card p {
+            font-size: 0.9rem;
+            margin: 0;
+            opacity: 0.8;
+        }
+
+        /* بخش واتسپ و دکمه‌ها */
+        .cta-section {
+            text-align: center;
+            margin-top: 60px;
         }
 
         .btn {
-            display: flex;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 15px;
-            margin: 15px 0;
+            width: 100%;
+            max-width: 400px;
+            padding: 18px;
+            margin: 10px 0;
             text-decoration: none;
             color: white;
-            border-radius: 12px;
+            border-radius: 15px;
             font-weight: bold;
             transition: 0.3s;
         }
 
         .btn-group { background-color: #075e54; }
         .btn-channel { background-color: #128c7e; }
-        .btn-chat { background-color: var(--whatsapp-green); }
-        .btn:hover { transform: translateY(-3px); opacity: 0.9; }
+        .btn-chat { background-color: var(--whatsapp-green); box-shadow: 0 5px 15px rgba(37,211,102,0.3); }
 
-        .footer {
-            background: rgba(0,0,0,0.3);
-            padding: 30px;
-            margin-top: 50px;
-            font-size: 0.9em;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
+        .btn:hover { transform: scale(1.02); opacity: 0.9; }
 
-        @media (max-width: 768px) {
-            .container { padding: 15px; }
+        footer {
+            text-align: center;
+            padding: 40px;
+            margin-top: 60px;
+            background: #050a18;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.85rem;
         }
     </style>
 </head>
@@ -131,51 +168,63 @@
 
     <header>
         <img src="logo.jpg" alt="Rowzana Omid Logo" class="logo-img">
-        <div style="font-size: 1.8em; font-weight: bold; color: white;">Rowzana Omid Academy</div>
-        <div style="color: var(--accent-gold); font-size: 1.2em;">آکادمی آنلاین روزنه امید</div>
+        <h1 style="margin: 0; font-size: 2.2rem;">آکادمی آنلاین روزنه امید</h1>
+        <p style="color: var(--accent-gold); letter-spacing: 1px;">Rowzana Omid Online Academy</p>
     </header>
 
     <div class="container">
         
-        <div class="glass-card">
-            <h3>🎯 مأموریت و دیدگاه ما</h3>
-            <p>مأموریت ما در آکادمی آنلاین روزنه امید، ارتقای ظرفیت‌های انسانی از طریق ارائه آموزش‌های باکیفیت و دسترس‌پذیر است. ما با تلفیق آموزش زبان و مهارت‌های نرم، ابزارهای لازم برای رشد پایدار را در اختیار دانش‌پذیران قرار می‌دهیم تا در دنیای رقابتی امروز، فراتر از محدودیت‌ها ظاهر شوند.</p>
+        <div class="vision-box">
+            <h2>👁️ دیدگاه ما</h2>
+            <p style="font-size: 1.1rem;">ما جهانی را متصوریم که در آن یادگیری مرز نمی‌شناسد؛ جایی که هر انسان، مجهز به دانش و زبانی است که او را به سوی موفقیت و آزادی هدایت می‌کند.</p>
         </div>
 
-        <div class="values-flex">
-            <div class="value-badge">🌱 رشد مستمر</div>
-            <div class="value-badge">🌍 کیفیت جهانی</div>
-            <div class="value-badge">🤝 شفافیت کامل</div>
-            <div class="value-badge">🎯 نتیجه‌محوری</div>
+        <div class="mission-card">
+            <h2>🎯 مأموریت ما</h2>
+            <p>مأموریت ما در روزنه امید، توانمندسازی دانش‌پژوهان از طریق آموزش‌های باکیفیت در حوزه‌های زبان و ارتقای ظرفیت فردی است. ما پل ارتباطی شما با دنیای تخصص و مهارت هستیم تا پتانسیل‌های نهفته‌تان را شکوفا کنیم.</p>
         </div>
 
-        <div class="badge">🎁 تمامی صنف‌ها ۱۰۰٪ رایگان است</div>
-        
-        <h2 style="margin-top: 20px; color: white;">به جمع ما بپیوندید!</h2>
-        <p>برای دریافت دروس و لینک صنف‌های رایگان، عضو شوید:</p>
-
-        <a href="https://chat.whatsapp.com/BxTRM3GkEEzFPmr0HyfTgB" class="btn btn-group">
-            👥 عضویت در گروپ اصلی (واتسپ)
-        </a>
-
-        <a href="https://whatsapp.com/channel/0029Vb9bxhm8KMqeFUDM2q2M" class="btn btn-channel">
-            📢 دنبال کردن کانال واتسپ
-        </a>
-
-        <a href="https://wa.me/93781234808" class="btn btn-chat">
-            ⏳ ثبت‌نام جریان دارد...
-        </a>
-
-        <div style="color: var(--accent-gold); font-weight: bold; margin-top: 30px; font-size: 1.2em;">
-        
+        <h2 class="values-title">💎 ارزش‌های بنیادین آکادمی</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <span class="icon">🌱</span>
+                <strong>رشد مستمر</strong>
+                <p>تعهد به به‌روزرسانی دانش و ارتقای همیشگی سطح آموزش.</p>
+            </div>
+            <div class="value-card">
+                <span class="icon">🌍</span>
+                <strong>کیفیت جهانی</strong>
+                <p>ارائه محتوای آموزشی منطبق بر استانداردهای بین‌المللی.</p>
+            </div>
+            <div class="value-card">
+                <span class="icon">🤝</span>
+                <strong>شفافیت و صداقت</strong>
+                <p>بنا نهادن رابطه با دانش‌آموزان بر پایه اعتماد و واقعیت.</p>
+            </div>
+            <div class="value-card">
+                <span class="icon">🎯</span>
+                <strong>نتیجه‌محوری</strong>
+                <p>تمرکز بر ایجاد تغییرات مثبت و ملموس در مهارت‌های شما.</p>
+            </div>
         </div>
+
+        <div class="cta-section">
+            <div style="background: var(--accent-gold); color: var(--dark-navy); padding: 10px 25px; border-radius: 50px; display: inline-block; font-weight: bold; margin-bottom: 25px;">
+                🎁 تمامی صنف‌ها ۱۰۰٪ رایگان است
+            </div>
+            
+            <a href="https://chat.whatsapp.com/BxTRM3GkEEzFPmr0HyfTgB" class="btn btn-group">👥 گروپ اصلی واتسپ</a>
+            <a href="https://whatsapp.com/channel/0029Vb9bxhm8KMqeFUDM2q2M" class="btn btn-channel">📢 کانال اطلاع‌رسانی</a>
+            <a href="https://wa.me/93781234808" class="btn btn-chat">  ثبت‌نام جریان دارد...</a>
+        </div>
+
     </div>
 
-    <div class="footer">
+    <footer>
         شماره تماس: 0781234808 <br>
         © 2026 Rowzana Omid Online Academy <br>
-        <small>همراه شما در مسیر تحول فردی و حرفه‌ای</small>
-    </div>
+        طراحی شده برای آینده‌ای روشن‌تر
+    </footer>
 
 </body>
-    </html>
+</html>
