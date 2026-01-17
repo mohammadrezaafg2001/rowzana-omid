@@ -1,19 +1,22 @@
-
-    </header>
-</style>
 <!DOCTYPE html>
+    <header>
+        <img src="logo.jpg" alt="Rowzana Omid Logo" class="logo-img">
+        <div style="font-size: 1.5em; font-weight: bold;">Rowzana Omid Academy</div>
+        <div>آکادمی آنلاین روزنه امید</div>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>آکادمی آنلاین روزنه امید</title>
+    <title>آکادمی آنلاین روزنه امید | Rowzana Omid Academy</title>
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
 
         :root {
-            --primary-bg: #0f172a;
+            --primary-blue: #002b5b;
+            --dark-navy: #0f172a;
             --accent-gold: #d4af37;
+            --whatsapp-green: #25d366;
             --glass-white: rgba(255, 255, 255, 0.07);
         }
 
@@ -21,166 +24,162 @@
             margin: 0;
             padding: 0;
             font-family: 'Vazirmatn', Tahoma, sans-serif;
-            background-color: var(--primary-bg);
+            background-color: var(--dark-navy);
             color: #f8fafc;
-        }
-
-        .rozaneh-intro {
-            padding: 60px 20px;
+            line-height: 1.8;
             text-align: center;
         }
 
+        /* هدر و لوگو */
+        header {
+            background-color: var(--primary-blue);
+            padding: 40px 20px;
+            border-bottom: 5px solid var(--accent-gold);
+        }
+
+        .logo-img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
         .container {
-            max-width: 1100px;
+            max-width: 900px;
             margin: 0 auto;
+            padding: 20px;
         }
 
-        .main-title {
-            font-size: 2.8rem;
-            margin-bottom: 10px;
-            color: white;
-        }
-
-        .main-title span {
-            color: var(--accent-gold);
-        }
-
-        .tagline {
-            font-size: 1.2rem;
-            opacity: 0.8;
-            margin-bottom: 50px;
-        }
-
-        .grid-layout {
-            display: flex;
-            gap: 25px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
+        /* بخش معرفی و مأموریت (Glassmorphism) */
         .glass-card {
             background: var(--glass-white);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
-            padding: 35px;
-            flex: 1;
-            min-width: 300px;
-            max-width: 480px;
-            transition: 0.3s;
+            padding: 30px;
+            margin: 20px 0;
             border-top: 4px solid var(--accent-gold);
-        }
-
-        .glass-card:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .icon-circle {
-            font-size: 45px;
-            margin-bottom: 15px;
-        }
-
-        h3 {
-            color: var(--accent-gold);
-            font-size: 1.6rem;
-            margin-bottom: 15px;
-        }
-
-        p {
-            line-height: 1.9;
             text-align: justify;
-            font-size: 1rem;
         }
 
-        .values-wrapper {
-            margin-top: 60px;
+        .glass-card h3 {
+            color: var(--accent-gold);
+            text-align: center;
+            margin-top: 0;
         }
 
+        /* بخش ارزش‌ها */
         .values-flex {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 10px;
             flex-wrap: wrap;
-            margin-top: 25px;
+            margin: 20px 0;
         }
 
         .value-badge {
             background: rgba(212, 175, 55, 0.15);
             border: 1px solid var(--accent-gold);
-            padding: 8px 20px;
+            padding: 8px 18px;
             border-radius: 50px;
-            font-weight: bold;
+            font-size: 0.9em;
             color: var(--accent-gold);
+            font-weight: bold;
+        }
+
+        /* دکمه‌های فراخوان (CTA) */
+        .badge {
+            background-color: var(--accent-gold);
+            color: var(--primary-blue);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 20px 0;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            margin: 15px 0;
+            text-decoration: none;
+            color: white;
+            border-radius: 12px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-group { background-color: #075e54; }
+        .btn-channel { background-color: #128c7e; }
+        .btn-chat { background-color: var(--whatsapp-green); }
+        .btn:hover { transform: translateY(-3px); opacity: 0.9; }
+
+        .footer {
+            background: rgba(0,0,0,0.3);
+            padding: 30px;
+            margin-top: 50px;
+            font-size: 0.9em;
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
 
         @media (max-width: 768px) {
-            .main-title { font-size: 2rem; }
-            .glass-card { min-width: 100%; }
+            .container { padding: 15px; }
         }
     </style>
 </head>
 <body>
 
-<section class="rozaneh-intro">
+    <header>
+        <img src="logo.jpg" alt="Rowzana Omid Logo" class="logo-img">
+        <div style="font-size: 1.8em; font-weight: bold; color: white;">Rowzana Omid Academy</div>
+        <div style="color: var(--accent-gold); font-size: 1.2em;">آکادمی آنلاین روزنه امید</div>
+    </header>
+
     <div class="container">
-        <div class="hero-content">
-            <h1 class="main-title">آکادمی آنلاین <span>روزنه امید</span></h1>
-            <p class="tagline">فراتر از یک آموزشگاه؛ همراه شما در مسیر تحول فردی و حرفه‌ای</p>
+        
+        <div class="glass-card">
+            <h3>🎯 مأموریت و دیدگاه ما</h3>
+            <p>مأموریت ما در آکادمی آنلاین روزنه امید، ارتقای ظرفیت‌های انسانی از طریق ارائه آموزش‌های باکیفیت و دسترس‌پذیر است. ما با تلفیق آموزش زبان و مهارت‌های نرم، ابزارهای لازم برای رشد پایدار را در اختیار دانش‌پذیران قرار می‌دهیم تا در دنیای رقابتی امروز، فراتر از محدودیت‌ها ظاهر شوند.</p>
         </div>
 
-        <div class="grid-layout">
-            <div class="glass-card">
-                <div class="icon-circle">🎯</div>
-                <h3>مأموریت ما</h3>
-                <p>شکستن مرزهای سنتی آموزش و مجهز کردن شما به سلاح زبان و مهارت‌های نرم؛ تا در هر کجای جهان، صدایی رسا و تأثیرگذار داشته باشید.</p>
-            </div>
-
-            <div class="glass-card">
-                <div class="icon-circle">👁️</div>
-                <h3>دیدگاه ما</h3>
-                <p>خلق جهانی که در آن هیچ استعدادی به دلیل محدودیت جغرافیایی خاموش نمی‌شود؛ جایی که دانش، پلی است به سوی آزادی، آگاهی و موفقیت پایدار.</p>
-            </div>
+        <div class="values-flex">
+            <div class="value-badge">🌱 رشد مستمر</div>
+            <div class="value-badge">🌍 کیفیت جهانی</div>
+            <div class="value-badge">🤝 شفافیت کامل</div>
+            <div class="value-badge">🎯 نتیجه‌محوری</div>
         </div>
 
-        <div class="values-wrapper">
-            <h2>💎 ارزش‌های بنیادین ما</h2>
-            <div class="values-flex">
-                <div class="value-badge"><span>🌱</span> رشد مستمر</div>
-                <div class="value-badge"><span>🌍</span> کیفیت جهانی</div>
-                <div class="value-badge"><span>🤝</span> شفافیت کامل</div>
-                <div class="value-badge"><span>🎯</span> نتیجه‌محوری</div>
-            </div>
+        <div class="badge">🎁 تمامی صنف‌ها ۱۰۰٪ رایگان است</div>
+        
+        <h2 style="margin-top: 20px; color: white;">به جمع ما بپیوندید!</h2>
+        <p>برای دریافت دروس و لینک صنف‌های رایگان، عضو شوید:</p>
+
+        <a href="https://chat.whatsapp.com/BxTRM3GkEEzFPmr0HyfTgB" class="btn btn-group">
+            👥 عضویت در گروپ اصلی (واتسپ)
+        </a>
+
+        <a href="https://whatsapp.com/channel/0029Vb9bxhm8KMqeFUDM2q2M" class="btn btn-channel">
+            📢 دنبال کردن کانال واتسپ
+        </a>
+
+        <a href="https://wa.me/93781234808" class="btn btn-chat">
+            💬 ارتباط مستقیم با مدیریت
+        </a>
+
+        <div style="color: var(--accent-gold); font-weight: bold; margin-top: 30px; font-size: 1.2em;">
+            ⏳ ثبت‌نام جریان دارد...
         </div>
     </div>
-</section>
+
+    <div class="footer">
+        شماره تماس: 0781234808 <br>
+        © 2026 Rowzana Omid Online Academy <br>
+        <small>همراه شما در مسیر تحول فردی و حرفه‌ای</small>
+    </div>
 
 </body>
-</html>
-    </section>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>آکادمی آنلاین روزنه امید | Rowzana Omid Academy</title>
-    <style>
-        :root {
-            --primary-color: #002b5b; 
-            --secondary-color: #d4af37;
-            --text-white: #ffffff;
-            --whatsapp-green: #25d366;
-        }
-        body {
-            font-family: 'Tahoma', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            color: var(--primary-color);
-            text-align: center;
-        }
-        header {
-            background-color: var(--primary-color);
-            padding: 30px 20px;
-            color: var(--text-white);
-            border-bottom: 5px solid var(--secondary-color);
-
-
+    </html>
